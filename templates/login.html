@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="body">
+    <div class="contact-container">
+        <form action="" method="post">
+            <div class="form-row">
+                <div class="input-data">
+                    <input id="username" name="username" type="text" required>
+                    <label>Username</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input id="Password" name="password" type="text" required>
+                    <label>Password</label>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <button type="submit" id="contact_btn">Login</button>
+            </div>
+            {% if failed %}
+            <center><small style="color: red;">Incorrect Username or Password</small></center>
+            {% endif %}
+        </form>
+    </div>
+</section>
+
+{% endblock %}

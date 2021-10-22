@@ -1,0 +1,67 @@
+{
+    "Houses":[
+        {
+          "image":"static/images/house1.jpg",
+          "House-title":"House 1",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet coconut water sef dey, oga just buy house flex no worry you go enjoy am na unique house ooo"
+        },
+        {
+          "image":"static/images/house2.jpg",
+          "House-title":"House 2",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+        },
+        {
+          "image":"static/images/house3.jpg",
+          "House-title":"House 3",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+      },
+      {
+          "image":"static/images/house4.jpg",
+          "House-title":"House 4",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+        },
+        {
+          "image":"static/images/house5.jpg",
+          "House-title":"House 5",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+        },
+        {
+          "image":"static/images/house6.jpg",
+          "House-title":"House 6",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+      },
+      {
+          "image":"static/images/house7.jpg",
+          "House-title":"House 7",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+        },
+        {
+          "image":"static/images/house8.jpg",
+          "House-title":"House 8",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+        },
+        {
+          "image":"static/images/house9.jpg",
+          "House-title":"House 9",
+          "Price":"10000000",
+          "Location":"Lekki",
+          "House-text":"This house na for moon ooo, The design sef no be here, it is out of this planet"
+       }
+     ]
+}

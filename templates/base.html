@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="cover-head"></div>
+    <section id="header">
+        <nav>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li ><a href="/">Home</a></li>
+                <li><a href="\about">About</a></li>
+                <li><a href="\service">Services</a></li>
+                <li><a href="\contact">Contact</a></li>
+            </ul>
+            <img id="logo" src="{{url_for('static', filename='images/ndora.jpg')}}" alt="">
+        </nav>
+    </section>
+   {% block content %}{% endblock %}
+    <section id="footer">
+        <div class="footer">
+            <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Copyright &#169 NDORA 2021.</p>
+        </div>
+    </section> 
+    <section class="mobile-menu">
+        <div>
+            <nav>
+                <ul>
+                    <li ><a href="/"><i class="fas fa-home">Home</i></a></li>
+                    <li><a href="\about"><i class="fas fa-info">About</i></a></li>
+                    <li><a href="\service"><i class="fas fa-tasks">Service</i></a></li>
+                    <li><a href="\contact"><i class="fas fa-address-book">Contact</i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

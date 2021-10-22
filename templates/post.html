@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}About NDora{% endblock %}
+{% block content %}
+<section id="body">
+    <div class="post">
+        <p>Posted: {{post.date_posted.strftime('%B %d %Y')}}</p>
+        <img src="../static/images/{{post.image}}" class="post-img" alt="">
+        <div class="post-body">
+            <h1 class="post-title">{{post.title}}</h1>
+            <div class="post-content">
+                <h3 class="post-location">LOCATION: {{post.location}}</h3>
+                <h3 class="post-price">PRICE: {{post.price}}</h3>
+            </div>
+            <div class="post-description">
+                <p>{{post.content}}</h3>
+            </div>
+            <button id="my-btn" class="button"> <a style="text-decoration: none; color: white;" href="/contact/{{post.slug}}">BOOK INSPECTION</a></button>
+        </div>
+    </div>
+</section>
+{% endblock %}

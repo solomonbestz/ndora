@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<section id="body">
+    <div class="card-container">
+       {% for post in posts.items %}
+        <div class="card">
+            <img src="../static/images/{{post.image}}" class="card-img" alt="">
+            <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">LOCATION: {{post.location}}</p>
+            <p class="card-text">PRICE: {{post.price}}</p>
+            <button class="button"><a style="text-decoration: none; color: white;" href="post/{{post.slug}}">SEE MORE</a></button>
+            <button id="my-btn" class="button"> <a style="text-decoration: none; color: white;" href="contact/{{post.slug}}">BOOK INSPECTION</a></button>
+            </div>
+        </div>
+       {% endfor %}
+    </div>
+    <div class="pagination">
+        <p style="color: white;"><<
+        {% for page_num in posts.iter_pages() %}
+        {% if page_num %}
+             <a href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
+        {% endif %}
+        {% endfor %}
+       >></p>
+         </div>
+</section>
+{% endblock %}

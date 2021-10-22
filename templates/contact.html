@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Contact NDora{% endblock %}
+{% block content %}
+<section id="body">
+    <div class="contact-container">
+        <div class="text">Contact NDORA</div>
+        <form action="#" method="POST">
+            <div class="form-row">
+                <div class="input-data">
+                    <input id="name" name="name" type="text" required>
+                    <label>Name</label>
+                </div>
+                <div style="display: none;">
+                    <input id="house-tag" name="house-tag" type="text" value="{{post.slug}}">
+                </div>
+                <div class="input-data"> 
+                    <input id="email" name="email" type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-data">
+                    <input id="phone" name="phone" type="tel" required>
+                    <label>Phone Number</label>
+                </div>
+            </div>
+            <div class="form-row textarea">
+                <div class="input-data">
+                    <textarea name="message" cols="30" rows="10" required></textarea>
+                    <label>Your message here</label>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <button type="submit" id="contact_btn">submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
