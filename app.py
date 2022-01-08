@@ -3,6 +3,7 @@ from flask_mail import Message, Mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+import pymysql
 import json
 
 from werkzeug.utils import redirect
