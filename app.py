@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, abort, session
 from flask_mail import Message, Mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
+from datetime import datetime
 from flask_admin.contrib.sqla import ModelView
-import pymysql
+
 import json
 
 from werkzeug.utils import redirect
@@ -17,11 +18,12 @@ app.config["MAIL_USERNAME"] = "davidheroku05@gmail.com"
 app.config["MAIL_PASSWORD"] = "surajbilly"
 app.config["MAIL_USE_TLS"] = False
 app.config["MAIL_USE_SSL"]= True
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root@localhost/flask_blog"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.sqlite3"
+
 db = SQLAlchemy(app)
 admin = Admin(app)
 
-
+# Posts(title='Lekki 2bedroom Flat', content='2 bedroom flat at lekki phase 1', location='Lekki/Lagos', price=1000000, image='house1.jpg', slug='lekki2bedroomfllat')
 class Posts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
@@ -29,8 +31,11 @@ class Posts(db.Model):
     location = db.Column(db.String(255))
     price = db.Column(db.Numeric(10,2))
     image = db.Column(db.String(20))
-    date_posted = db.Column(db.DateTime)
+    date_posted = db.Column(db.DateTime, default=datetime.now)
     slug = db.Column(db.String(255))
+
+    def __repr__(self):
+        return f"{self.title} - {self.price}"
 
 class SecureModelView(ModelView):
     def is_accessible(self):

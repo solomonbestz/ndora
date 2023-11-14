@@ -17,7 +17,7 @@
        {% endfor %}
     </div>
     <div class="pagination">
-        <p style="color: white;"><<
+        <p style="color: white;">
         {% for page_num in posts.iter_pages() %}
         {% if page_num %}
              <a href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
